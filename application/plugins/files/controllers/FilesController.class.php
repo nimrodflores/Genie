@@ -27,8 +27,7 @@
     * @return null
     */
     function index() {
-		
-		echo 'FilesController.class.php Called!';
+
 		//die();
 		
       $this->addHelper('textile');

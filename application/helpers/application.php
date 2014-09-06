@@ -570,7 +570,7 @@
   * @param integer $max_controls Max number of controls
   * @return string
   */
-  function render_attach_files($prefix = 'attach_files', $max_controls = 5) {
+  function render_attach_files($prefix = 'attach_files', $max_controls = 10) {
     if (!plugin_active('files')) {
       return '';
     }
