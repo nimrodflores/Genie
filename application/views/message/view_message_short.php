@@ -20,7 +20,7 @@
 
 } else {
 	
-	echo 'Deleted(or user not found)';
+	echo 'User not found/deleted';
 }
 // ?>
 </td>
