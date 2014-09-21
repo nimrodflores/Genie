@@ -102,6 +102,12 @@
           }
         }
       } // 
+	  // DEBUG:
+	  /*
+	  echo "created by:<pre>";
+	  var_dump ($this->created_by);
+	  echo "</pre>";
+	  */
       return $this->created_by;
     } // getCreatedBy
     
