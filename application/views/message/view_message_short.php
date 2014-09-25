@@ -14,7 +14,15 @@
 <a href="<?php echo $message->getViewUrl() ?>"><?php echo clean($message->getTitle()) ?></a>
 </td>
 <td>
-<a href="<?php echo $message->getCreatedBy()->getCardUrl() ?>"><?php echo clean($message->getCreatedBy()->getDisplayName()) ?></a>
+<?php if ( is_object( $message->getCreatedBy() ) ){
+
+	echo '<a href="' . $message->getCreatedBy()->getCardUrl() . '">' . clean($message->getCreatedBy()->getDisplayName()) . '</a>';
+
+} else {
+	
+	echo 'User not found/deleted';
+}
+// ?>
 </td>
 <td class="center">
 <a href="<?php echo $message->getViewUrl() ?>#objectComments"><?php echo $message->countComments() ?></a>

@@ -52,7 +52,7 @@
   } // if
   trace(__FILE__,'task lists: end');
 
-  $thisMonth = gmmktime(0, 0, 0, $month, 2, $year, 0);
+  $thisMonth = gmmktime(0, 0, 0, $month, 2, $year);
   //echo date('Y m d H i s', $thisMonth);
   $prevMonth = strtotime('-1 month', $thisMonth);
   $nextMonth = strtotime('+1 month', $thisMonth);

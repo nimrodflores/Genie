@@ -35,7 +35,7 @@
     * @param boolean $group_by_order Group files by order field
     * @return array
     */
-    static function getProjectFiles(Project $project, $folder = null, $hide_private = false, $order = null, $page = null, $files_per_page = null, $group_by_order = false) {
+    static function getProjectFiles(Project $project, $folder = null, $hide_private = false, $order = 'created_on', $page = null, $files_per_page = null, $group_by_order = false) {
       trace(__FILE__,'getProjectFiles()');
       if ($order == self::ORDER_BY_POSTTIME) {
         $order_by = '`created_on` DESC';
