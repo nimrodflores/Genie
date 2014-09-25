@@ -1,3 +1,10 @@
+This project is just an implementation of the ProjectPier collaboration software for
+one of my clients. I have modified some parts of the software to fit the needs of the
+client and to fix some bugs.
+
+Find me at: http://nimrodflores.com
+
+
 ~~~~~~
 Version
 ~~~~~~~
