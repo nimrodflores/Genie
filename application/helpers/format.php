@@ -55,7 +55,8 @@
 	*/
 	
 	//hard-coded override to use server's localtime - as set in /environment/environment.php - as the localization offset for all users.
-	$timezone = string(date('O'));
+	$timezone = date('Z')/3600;
+	//echo $timezone;
 	
     $datetime = $value instanceof DateTimeValue ? $value : new DateTimeValue($value);
     return Localization::instance()->formatDateTime($datetime, $format, $timezone);
