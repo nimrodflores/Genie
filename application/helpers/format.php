@@ -48,9 +48,15 @@
   * @return string
   */
   function format_datetime($value = null, $format = null, $timezone = null) {
-    if (is_null($timezone) && function_exists('logged_user') && (logged_user() instanceof User)) {
+    /*
+	if (is_null($timezone) && function_exists('logged_user') && (logged_user() instanceof User)) {
       $timezone = logged_user()->getContact()->getTimezone();
     } // if
+	*/
+	
+	//hard-coded override to use server's localtime - as set in /environment/environment.php - as the localization offset for all users.
+	$timezone = string(date('O'));
+	
     $datetime = $value instanceof DateTimeValue ? $value : new DateTimeValue($value);
     return Localization::instance()->formatDateTime($datetime, $format, $timezone);
   } // format_datetime
