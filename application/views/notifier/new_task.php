@@ -1,5 +1,5 @@
 ------------------------------------------------------------
- <?php echo lang('do not reply warning') ?> 
+ <?php echo lang('do not reply warning')."\n"; ?>
 ------------------------------------------------------------
 
 <?php echo lang('new task posted', $new_task->getObjectName(), $new_task->getProject()->getName()) ?>. 

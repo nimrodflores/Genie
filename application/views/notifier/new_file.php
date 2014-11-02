@@ -1,5 +1,5 @@
 ------------------------------------------------------------
-<?php echo lang('do not reply warning') ?> 
+<?php echo lang('do not reply warning')."\n"; ?>
 ------------------------------------------------------------
 
 <?php echo lang('new file posted', $new_file->getFilename(), $new_file->getProject()->getName()) ?>. 

@@ -1,5 +1,7 @@
+------------------------------------------------------------
+<?php echo lang('do not reply warning')."\n"; ?>
+------------------------------------------------------------
 <?php 
-echo lang('do not reply warning')."\n";
 echo lang('new comment posted', $new_comment->getObject()->getObjectName());
 if ((!defined('SHOW_COMMENT_BODY')) or (SHOW_COMMENT_BODY == true)) {
   echo "\n----------------\n";

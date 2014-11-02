@@ -1,5 +1,5 @@
 ------------------------------------------------------------
-<?php echo lang('do not reply warning') ?> 
+<?php echo lang('do not reply warning')."\n"; ?>
 ------------------------------------------------------------
 
 <?php echo lang('new message posted', $new_message->getTitle(), $new_message->getProject()->getName()) ?>. 

@@ -1,6 +1,6 @@
 <?php trace(__FILE__,''); ?>
 ------------------------------------------------------------
-<?php echo lang('do not reply warning') ?> 
+<?php echo lang('do not reply warning')."\n"; ?>
 ------------------------------------------------------------
 <?php echo lang('task assigned', $task_assigned->getObjectName()) ?>. 
 <?php
