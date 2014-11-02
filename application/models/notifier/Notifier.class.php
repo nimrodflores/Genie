@@ -562,6 +562,7 @@
       * Set name address in ReplyTo, some MTA think we're usurpators
       * (which is quite true actually...)
       */
+	  /*
       if (config_option('mail_use_reply_to', 0)==1) {
         $i = strpos($from, ' <');
         $name = '?';
@@ -582,7 +583,8 @@
 
       trace("mailer->send($to, $from, $subject, $body, $type, $encoding)");
 
-      $result = $mailer->send($to, $from, $subject, $body, $type, $encoding);
+      */
+	  $result = $mailer->send($to, $from, $subject, $body, $type, $encoding);
       $mailer->close();
       
       return $result;
