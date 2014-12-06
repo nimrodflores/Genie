@@ -10,9 +10,10 @@
 ** For config.php:  define('SHOW_MILESTONE_BODY', false);
 */
 if ((!defined('SHOW_MILESTONE_BODY')) or (SHOW_MILESTONE_BODY == true)) {
-  echo "\n----------------\n";
-  echo $milestone_assigned->getDescription();
   echo "\n----------------\n\n";
+  echo $milestone_assigned->getDescription() . "\n\n";
+  echo $milestone_assigned->getCreatedBySignature()."\n";
+  echo "\n\n----------------\n\n";
 }
 ?>
 

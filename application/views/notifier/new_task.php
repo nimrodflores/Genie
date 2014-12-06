@@ -10,9 +10,10 @@
 ** For config.php:  define('SHOW_MESSAGE_BODY', false);
 */
 if ((!defined('SHOW_MESSAGE_BODY')) or (SHOW_MESSAGE_BODY == true)) {
-  echo "\n----------------\n";
-  echo $new_task->getText();
   echo "\n----------------\n\n";
+  echo $new_task->getText() . "\n\n";
+  echo $new_task->getCreatedBySignature()."\n";
+  echo "\n\n----------------\n\n";
 }
 ?>
 

@@ -11,8 +11,9 @@
 */
 if ((!defined('SHOW_MESSAGE_BODY')) or (SHOW_MESSAGE_BODY == true)) {
   echo "\n----------------\n";
-  echo $new_message->getText();
-  echo "\n----------------\n\n";
+  echo $new_message->getText() . "\n\n";
+  echo $new_message->getCreatedBySignature()."\n";
+  echo "\n\n----------------\n\n";
 }
 ?>
 

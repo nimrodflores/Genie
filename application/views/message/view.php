@@ -33,6 +33,9 @@
     <div class="messageSeparator"><?php echo lang('message separator') ?></div>
     <?php echo do_textile($message->getAdditionalText()) ?>
 <?php } // if?>
+
+	<p><?php  echo $createdBy->getSignature(); ?></p>
+    
   </div>
 <?php echo render_object_files($message, $message->canEdit(logged_user())) ?>
   <div class="messageCommentCount">

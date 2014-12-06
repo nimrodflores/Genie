@@ -544,6 +544,7 @@
         $user_data = array(
           'username'     => $user->getUsername(),
           'email'        => $user->getEmail(),
+		  'signature'	 => $user->getSignature(),
           'timezone'     => $user->getTimezone(),
           'is_admin'     => $user->isAdministrator(),
           'auto_assign'  => $user->getAutoAssign(),
@@ -590,14 +591,14 @@
           }
           
           DB::beginWork();
-          $user->save();
+		  $user->save();
 
           $user->setPermission(PermissionManager::CAN_MANAGE_PROJECTS, $granted);
 
           ApplicationLogs::createLog($user, null, ApplicationLogs::ACTION_EDIT);
           
           DB::commit();
-          
+		  
           // Send notification...
           try {
             if (array_var($user_data, 'send_email_notification')) {
@@ -606,9 +607,11 @@
           } catch(Exception $e) {
           
           } // try
-          
+		  
           flash_success(lang('success edit user', $user->getDisplayName()));
-          $this->redirectToUrl($company->getViewUrl()); // Translate to profile page
+		  //$this->redirectToUrl($company->getViewUrl()); // Translate to profile page
+		  $this->redirectTo('contacts', 'edit_user_account', array('id' => get_id() ) );
+          
           
         } catch(Exception $e) {
           DB::rollback();

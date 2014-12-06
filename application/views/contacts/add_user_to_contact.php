@@ -46,12 +46,15 @@
     <?php echo textarea_field('user[signature]', array_var($user_data, 'signature'), array('class' => 'long', 'id' => 'userFormSignature')) ?>
   </div>
   
+<?php if ($user->isNew() || logged_user()->isAdministrator()) { ?>
+
   <div>
     <?php echo label_tag(lang('timezone'), 'userFormTimezone', true)?>
     <?php echo select_timezone_widget('user[timezone]', array_var($user_data, 'timezone'), array('id' => 'userFormTimezone', 'class' => 'long combobox')) ?>
   </div>
-  
-<?php if ($user->isNew() || logged_user()->isAdministrator()) { ?>
+
+<?php } // if ?>
+
   <fieldset>
     <legend><?php echo lang('password') ?></legend>
     <div>
@@ -72,7 +75,6 @@
       </div>
     </div>
   </fieldset>
-<?php } // if ?>
 
 <?php if ($company->isOwner() && logged_user()->isAdministrator() ) { ?>
   <fieldset>
@@ -110,14 +112,16 @@
   <input type="hidden" name="user[use_LDAP]" value="0" />
   <input type="hidden" name="user[can_manage_projects]" value="0" />
 <?php } // if ?>
-  
+
+<?php if ($user->isNew()) { ?>  
+
   <div class="formBlock">
     <?php echo label_tag(lang('send new account notification'), null, true) ?>
     <?php echo yes_no_widget('user[send_email_notification]', 'userFormEmailNotification', array($user_data, 'send_email_notification'), lang('yes'), lang('no')) ?>
     <br /><span class="desc"><?php echo lang('send new account notification desc') ?></span>
   </div>
   
-<?php if ($user->isNew()) { ?>
+
 <?php if (isset($projects) && is_array($projects) && count($projects)) { ?>
   <fieldset>
     <legend><?php echo lang('permissions') ?></legend>

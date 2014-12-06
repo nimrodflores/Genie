@@ -668,6 +668,19 @@
       $display = parent::getDisplayName();
       return trim($display) == '' ? $this->getUsername() : $display;
     } // getDisplayName
+	
+    /**
+    * Return signature for this account.
+    *
+    * @access public
+    * @param void
+    * @return string
+    */
+    function getSignature() {
+      $signature = parent::getSignature();
+      return trim($signature);
+    } // getSignature
+	
     
     // ---------------------------------------------------
     //  Utils

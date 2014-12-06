@@ -122,7 +122,20 @@
       $created_by = $this->getCreatedBy();
       return $created_by instanceof User ? $created_by->getDisplayName() : lang('n/a');
     } // getCreatedByDisplayName
+	
+    /**
+    * Return signature of author
+    *
+    * @access public
+    * @param void
+    * @return string
+    */
+	function getCreatedBySignature() {
+      $created_by = $this->getCreatedBy();
+      return $created_by instanceof User ? $created_by->getSignature() : null;
+    } // getCreatedBySignature
     
+	
     /**
     * Return card URL of created by user
     *

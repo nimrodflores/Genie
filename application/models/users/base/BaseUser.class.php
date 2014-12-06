@@ -69,6 +69,17 @@
     function getEmail() {
       return $this->getColumnValue('email');
     } // getEmail()
+	
+    /**
+    * Return value of 'signature' field
+    *
+    * @access public
+    * @param void
+    * @return string 
+    */
+    function getSignature() {
+      return $this->getColumnValue('signature');
+    } // getSignature()
     
     /**
     * Set value of 'email' field
@@ -157,7 +168,7 @@
     function getDisplayName() {
       return $this->getColumnValue('username');
     } // getDisplayName()
-    
+	
     /**
     * Set value of 'display_name' field
     *
