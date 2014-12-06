@@ -69,7 +69,7 @@
   </fieldset>
 <?php } // if ?>
 
-<?php if ($company->isOwner()) { ?>
+<?php if ($company->isOwner() && logged_user()->isAdministrator() ) { ?>
   <fieldset>
     <legend><?php echo lang('options') ?></legend>
 <?php if (!$contact->isAccountOwner()) { ?>
