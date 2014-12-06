@@ -18,11 +18,11 @@ if ((!defined('SHOW_MESSAGE_BODY')) or (SHOW_MESSAGE_BODY == true)) {
 
 <?php echo lang('view new file') ?>:
 
-- <?php echo str_replace('&amp;', '&', externalUrl($new_file->getViewUrl())) ?> 
+- <?php echo str_replace('&amp;', '&', externalUrl($new_file->getViewUrl())) . "\n\n"; ?> 
 
-<?php echo lang('company') ?>: <?php echo owner_company()->getName() ?> 
-<?php echo lang('project') ?>: <?php echo $new_file->getProject()->getName() ?> 
-<?php echo lang('author') ?>: <?php echo $new_file->getCreatedByDisplayName() ?> 
+<?php echo lang('company') ?>: <?php echo owner_company()->getName() . "\n"; ?> 
+<?php echo lang('project') ?>: <?php echo $new_file->getProject()->getName() . "\n"; ?> 
+<?php echo lang('author') ?>: <?php echo $new_file->getCreatedByDisplayName() . "\n"; ?> 
 
 --
 <?php echo externalUrl(ROOT_URL) ?>

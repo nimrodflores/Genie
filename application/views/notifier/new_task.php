@@ -18,11 +18,11 @@ if ((!defined('SHOW_MESSAGE_BODY')) or (SHOW_MESSAGE_BODY == true)) {
 
 <?php echo lang('view new task') ?>:
 
-- <?php echo str_replace('&amp;', '&', externalUrl($new_task->getViewUrl())) ?> 
+- <?php echo str_replace('&amp;', '&', externalUrl($new_task->getViewUrl())) . "\n\n"; ?> 
 
-<?php echo lang('company') ?>: <?php echo owner_company()->getName() ?> 
-<?php echo lang('project') ?>: <?php echo $new_task->getProject()->getName() ?> 
-<?php echo lang('author') ?>: <?php echo $new_task->getCreatedByDisplayName() ?> 
+<?php echo lang('company') ?>: <?php echo owner_company()->getName() . "\n"; ?> 
+<?php echo lang('project') ?>: <?php echo $new_task->getProject()->getName() . "\n"; ?> 
+<?php echo lang('author') ?>: <?php echo $new_task->getCreatedByDisplayName() . "\n"; ?> 
 
 --
 <?php echo externalUrl(ROOT_URL) ?>

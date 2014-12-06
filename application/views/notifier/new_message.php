@@ -18,11 +18,11 @@ if ((!defined('SHOW_MESSAGE_BODY')) or (SHOW_MESSAGE_BODY == true)) {
 
 <?php echo lang('view new message') ?>:
 
-- <?php echo str_replace('&amp;', '&', externalUrl($new_message->getViewUrl())) ?> 
+- <?php echo str_replace('&amp;', '&', externalUrl($new_message->getViewUrl())) . "\n\n"; ?> 
 
-<?php echo lang('company') ?>: <?php echo owner_company()->getName() ?> 
-<?php echo lang('project') ?>: <?php echo $new_message->getProject()->getName() ?> 
-<?php echo lang('author') ?>: <?php echo $new_message->getCreatedByDisplayName() ?> 
+<?php echo lang('company') ?>: <?php echo owner_company()->getName() . "\n"; ?> 
+<?php echo lang('project') ?>: <?php echo $new_message->getProject()->getName() . "\n"; ?> 
+<?php echo lang('author') ?>: <?php echo $new_message->getCreatedByDisplayName() . "\n"; ?> 
 
 --
 <?php echo externalUrl(ROOT_URL) ?>
