@@ -520,10 +520,16 @@
         $this->redirectTo('dashboard', 'contacts');
       } // if
       
-      if (!$contact->canEditUserAccount(logged_user())) {
+	  /**
+	   * No need as users cannot edit fields they're not supposed to
+	   * but have to be able to edit their own account.
+	  */ 
+      /*
+	  if (!$contact->canEditUserAccount(logged_user())) {
         flash_error(lang('no access permissions'));
         $this->redirectTo('dashboard', 'contacts');
       } // if
+	  */
       
       if (!$contact->hasUserAccount()) {
         flash_error(lang('user dnx'));
