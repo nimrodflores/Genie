@@ -17,7 +17,8 @@
     static private $columns = array(
       'id' => DATA_TYPE_INTEGER, 
       'username' => DATA_TYPE_STRING, 
-      'email' => DATA_TYPE_STRING, 
+      'email' => DATA_TYPE_STRING,
+	  'signature' => DATA_TYPE_STRING,
       'token' => DATA_TYPE_STRING, 
       'salt' => DATA_TYPE_STRING, 
       'twister' => DATA_TYPE_STRING, 
