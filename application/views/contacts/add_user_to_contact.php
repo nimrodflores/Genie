@@ -42,6 +42,11 @@
   </div>
   
   <div>
+    <?php echo label_tag(lang('Signature'), 'userFormSignature', false) ?>
+    <?php echo textarea_field('user[signature]', array_var($user_data, 'signature'), array('class' => 'long', 'id' => 'userFormSignature')) ?>
+  </div>
+  
+  <div>
     <?php echo label_tag(lang('timezone'), 'userFormTimezone', true)?>
     <?php echo select_timezone_widget('user[timezone]', array_var($user_data, 'timezone'), array('id' => 'userFormTimezone', 'class' => 'long combobox')) ?>
   </div>
