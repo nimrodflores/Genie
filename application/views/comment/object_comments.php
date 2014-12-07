@@ -25,7 +25,7 @@
       <div class="commentText"><?php echo plugin_manager()->apply_filters('comment_text', do_textile($comment->getText())) ?></div>
       <div class="clear"></div>
       
-      <p><?php  echo $createdBy->getSignature(); ?></p>
+      <p><?php  echo nl2br($createdBy->getSignature()); ?></p>
       
       <?php echo render_object_files($comment, $comment->canEdit(logged_user())) ?>
     </div>

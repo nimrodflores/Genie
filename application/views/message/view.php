@@ -34,7 +34,7 @@
     <?php echo do_textile($message->getAdditionalText()) ?>
 <?php } // if?>
 
-	<p><?php  echo $createdBy->getSignature(); ?></p>
+	<p><?php  echo nl2br($createdBy->getSignature()); ?></p>
     
   </div>
 <?php echo render_object_files($message, $message->canEdit(logged_user())) ?>
